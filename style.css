@@ -533,6 +533,67 @@ header .navbar {
 
 /* Responsive media query code for mac width 640px */
 @media screen and (max-width: 640px) {
+
+    :root {
+        --font-size-s: 0.8rem;
+        --font-size-m: 0.95rem;
+        --font-size-l: 1.1rem;
+        --font-size-xl: 1.3rem;
+        --font-size-xxl: 1.5rem;
+    }
+
+    .section-title {
+        font-size: var(--font-size-l);
+        padding: 40px 0 60px;
+    }
+
+    .hero-section .hero-details .description {
+        font-size: var(--font-size-s);
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .button {
+        font-size: var(--font-size-s);
+        padding: 8px 18px;
+    }
+
+    .about-section .about-details .text {
+        font-size: var(--font-size-s);
+        margin: 30px 0 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        max-width: 200px;
+        aspect-ratio: 1;
+    }
+
+    .contact-section .contact-form .form-input,
+    .contact-section .contact-form textarea {
+        font-size: var(--font-size-s);
+    }
+
+    .contact-section .contact-form .submit-button {
+        font-size: var(--font-size-s);
+        padding: 8px 20px;
+    }
+
+    .footer-section .section-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .navbar .nav-menu {
+        width: 100%;
+    }
+
+    .navbar .nav-menu .nav-link {
+        font-size: var(--font-size-l);
+    }
+
     .who-we-are .swiper-slide-button {
         display: none;
     }
