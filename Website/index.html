@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoggyByte Games</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pixelify+Sans&display=swap"
+        rel="stylesheet">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- Header | Navbar -->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">SoggyByte</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#games" class="nav-link">Games</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h3 class="title">Soaked in the digital world, but never sunk!</h3>
+                    <p class="description">
+                        Hello! We are SoggyByte, a team that develops creative and exciting games.
+                        We aim to make a name for ourselves in the gaming industry with our evolving team.
+                        We started this exciting journey during our student years and progressed through Game Jams.
+                        We look forward to sharing this journey with you. Happy gaming!
+                    </p>
+                    <div class="buttons">
+                        <a href="#" class="button">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="Images/Player-Defense.gif" alt="Defense" class="hero-image">
+                </div>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section class="about-section" id="about">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="Images/SoggyByte Logo.jpg" alt="About" class="about-image">
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="text">Hello! We are SoggyByte, a team that develops creative and exciting games.
+                        We aim to make a name for ourselves in the gaming industry with our evolving team.
+                        We started this exciting journey during our student years and progressed through Game Jams.
+                        We look forward to sharing this journey with you. Happy gaming!
+                    </p>
+                    <div class="social-link-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Who we are Section -->
+            <div class="who-we-are">
+                <div class="slider-container swiper">
+                    <div class="slider-wrapper">
+                        <ul class="us-list swiper-wrapper">
+                            <li class="us swiper-slide">
+                                <img src="Images/Profile-Nur.jpg" alt="us" class="us-image">
+                                <h3 class="name"> A. Nur ASLAN</h3>
+                                <i class="info">Software Engineer Student / Game Developer</i>
+                            </li>
+                            <li class="us swiper-slide">
+                                <img src="Images/Profile-Barkın.jpg" alt="us" class="us-image">
+                                <h3 class="name"> Barkın Ali LÜKÜSLÜ</h3>
+                                <i class="info">Digital Game Design Student / Game Developer</i>
+                            </li>
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <ul class="contact-info-list">
+                    <!-- <li class="contact-info">
+                        <i class="f-regular fa-envelope">
+                            <p>soggybytegames@gmail.com</p>
+                        </i>
+                    </li> -->
+                </ul>
+
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your name" class="form-input" required>
+                    <input type="e-mail" placeholder="Your e-mail" class="form-input" required>
+                    <textarea placeholder="Your message" class="form-input" required></textarea>
+                    <button class="submit-button">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">© 2025 SoggyByte Games</p>
+
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy Policy</a>
+                </p>
+
+            </div>
+        </footer>
+    </main>
+
+    <!-- Swiper Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
