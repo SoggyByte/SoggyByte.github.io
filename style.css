@@ -45,6 +45,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 /* Styling for whole site */
 ul {
     list-style: none;
@@ -306,10 +310,84 @@ header .navbar {
     color: var(--dark-color);
 }
 
+/* Games Section Styling */
+.games-section {
+    padding: 50px 0 100px;
+    color: var(--primary-color);
+    background: var(--dark-color);
+}
+
+.games-section .games-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.games-section .games-list .games {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% / 3 - 50px);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--border-radius-s);
+}
+
+.image-container:hover .img-overlay {
+    opacity: 0.8;
+}
+
+.games-section .games-list .games .games-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-s);
+    display: block;
+}
+
+.games-section .games-list .games .name {
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Overlay */
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-gray-color);
+    border-radius: var(--border-radius-s);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+
+.img-overlay .icon {
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
 /* Contact Us Section */
 .contact-section {
     padding: 50px 0 100px;
-    background: var(--dark-color);
+    background: var(--medium-gray-color);
 }
 
 .contact-section .section-title {
@@ -380,7 +458,7 @@ header .navbar {
 /* Footer Section */
 .footer-section {
     padding: 20px 0;
-    background: var(--medium-gray-color);
+    background: var(--dark-color);
 }
 
 .footer-section .section-content {
@@ -436,6 +514,29 @@ header .navbar {
 
     .hero-section .hero-image-wrapper {
         max-width: 400px;
+    }
+
+    .games-section .games-list .games {
+        width: calc(50% - 20px);
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .games-section .games-list .games .image-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+    }
+
+    .games-section .games-list .games .games-image,
+    .games-section .games-list .games .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -542,7 +643,7 @@ header .navbar {
     }
 
     .about-section .social-link-list .social-link {
-        font-size: var(--font-size-l);
+        font-size: var(--font-size-xl);
     }
 
     .about-section .about-details .section-title {
@@ -551,7 +652,7 @@ header .navbar {
     }
 
     .about-section .about-details .text {
-        text-align: left;
+        text-align: center;
         /* Metni sola hizala */
         padding: 0 10px;
         /* Kenarlardan biraz padding ekle */
@@ -577,6 +678,35 @@ header .navbar {
 
     .who-we-are .slider-wrapper {
         margin: 0 30px 50px;
+    }
+
+    .games-section {
+        padding: 30px 0 70px;
+    }
+
+    .games-section .section-title {
+        padding: 40px 0 60px;
+    }
+
+    .games-section .games-list .games {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .games-section .games-list .games .image-container {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .games-section .games-list .games .games-image,
+    .games-section .games-list .games .img-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
     }
 }
 
@@ -707,7 +837,7 @@ header .navbar {
     }
 
     .about-section .social-link-list .social-link {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-xxl);
     }
 
     .about-section .about-details .section-title {
@@ -777,6 +907,27 @@ header .navbar {
     .contact-section .contact-image-wrapper {
         max-width: 220px;
         margin-right: 0;
+    }
+
+    .games-section .games-list .games {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .games-section .games-list .games .image-container {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .games-section .games-list .games .games-image,
+    .games-section .games-list .games .img-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
     }
 
     .footer-section .section-content {

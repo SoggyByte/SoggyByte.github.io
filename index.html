@@ -32,15 +32,14 @@
     <!-- Header | Navbar -->
     <header>
         <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
+            <a href="#home" class="nav-logo">
                 <h2 class="logo-text">SoggyByte</h2>
             </a>
             <ul class="nav-menu">
                 <button id="menu-close-button" class="fas fa-times"></button>
 
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li class="nav-item"><a href="#games" class="nav-link">Games</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -50,7 +49,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" id="home">
             <div class="section-content">
                 <div class="hero-details">
                     <h3 class="title">Soaked in the digital world, but never sunk!</h3>
@@ -61,7 +60,7 @@
                         We look forward to sharing this journey with you. Happy gaming!
                     </p>
                     <div class="buttons">
-                        <a href="#" class="button">Contact Us</a>
+                        <a href="#contact" class="button">Contact Us</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
@@ -96,9 +95,12 @@
                         Happy gaming!
                     </p>
                     <div class="social-link-list">
-                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/soggybytegames/" target="_blank" class="social-link"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@soggybytegames?lang=tr-TR" target="_blank"
+                            class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@SoggyByte" target="_blank" class="social-link"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -127,6 +129,26 @@
             </div>
             </div>
         </section>
+        <!-- Games Section -->
+        <section class="games-section" id="games">
+            <h2 class="section-title">Games</h2>
+            <div class="section-content">
+                <ul class="games-list">
+                    <li class="games">
+                        <a href="IgnısUltima.html" class="image-container">
+                            <img src="Images/Son Işığı ve Alev.png" alt="Cthulhu" class="games-image">
+                            <div class="img-overlay">
+                                <div class="icon">
+                                    <i class="fa-solid fa-info"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <h3 class="name">Ignıs Ultima</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <h2 class="section-title">Contact Us</h2>
@@ -158,9 +180,12 @@
                 <p class="copyright-text">© 2025 SoggyByte Games</p>
 
                 <div class="social-link-list">
-                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/soggybytegames/" target="_blank" class="social-link"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@soggybytegames?lang=tr-TR" target="_blank" class="social-link"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@SoggyByte" target="_blank" class="social-link"><i
+                            class="fa-brands fa-youtube"></i></a>
                 </div>
 
                 <p class="policy-text">
@@ -174,6 +199,7 @@
     <!-- Swiper Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Main Script -->
     <script src="script.js"></script>
 </body>
 

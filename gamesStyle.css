@@ -1,0 +1,556 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pixelify+Sans&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #e2e3e2;
+    --secondary-color: #383838;
+    --light-gray-color: #797979;
+    --medium-gray-color: #444544;
+    --game-dark-color: #050709;
+    --game-light-color: #173031;
+    --game-fire-color: #b82d09;
+
+    /* Font Sizes */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+    --font-size-xxxl: 2.5rem;
+    --font-size-exrta-large: 3.5rem;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border Radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site Max Width */
+    --site-max-width: 1300px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Styling for whole site */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--light-gray-color);
+}
+
+/* Navbar Styling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--dark-color);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+#menu-close-button,
+#menu-open-button {
+    display: none;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://i.hizliresim.com/1ha64um.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Karartma efekti */
+    z-index: 0;
+}
+
+.portfolio-section .section-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.portfolio-section .section-content .title-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.portfolio-section .section-content .title .first-line {
+    display: block;
+    font-size: calc(var(--font-size-xl) * 0.8);
+    font-weight: 700;
+    color: #b82d09;
+    font-family: "Pixelify Sans", sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    line-height: 1;
+}
+
+.portfolio-section .section-content .title .second-line {
+    display: block;
+    font-size: var(--font-size-exrta-large);
+    font-weight: 700;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    line-height: 1;
+}
+
+/* Story Section Styling */
+.story-section {
+    padding: 100px;
+    background-color: var(--game-dark-color);
+}
+
+.story-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story-section .section-content .section-title {
+    color: var(--primary-color);
+    padding: 0;
+}
+
+.story-section .section-content .story-first-line {
+    color: var(--game-fire-color);
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+
+.story-section .section-content .description {
+    color: var(--primary-color);
+    line-height: 30px;
+    text-align: center;
+    font-size: var(--font-size-s);
+}
+
+
+
+
+
+/* Footer Section */
+.footer-section {
+    padding: 20px 0;
+    background: var(--game-dark-color);
+}
+
+.footer-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+    color: var(--primary-color);
+    transition: 0.2s ease;
+}
+
+.footer-section .social-link-list {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-section .social-link-list .social-link {
+    font-size: var(--font-size-l);
+}
+
+.footer-section .social-link-list .social-link:hover,
+.footer-section .policy-text .policy-link:hover {
+    color: var(--game-fire-color);
+}
+
+/* Büyük cihazlar (dizüstü ve üzeri, 993px ve üzeri) */
+@media (min-width: 993px) {
+    /* Büyük ekranlarda genel stil değişikliği gerekmemektedir, 
+       çünkü ana stil büyük ekranlar için tasarlanmıştır */
+}
+
+/* Orta cihazlar (küçük dizüstüler, 769px–992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    :root {
+        --font-size-xl: 1.8rem;
+        --font-size-xxl: 2rem;
+        --font-size-xxxl: 2.2rem;
+        --font-size-exrta-large: 2.8rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section .section-content {
+        height: auto;
+        min-height: 80vh;
+        padding: 50px 20px;
+    }
+
+    .portfolio-section .section-content .title .first-line {
+        font-size: calc(var(--font-size-xl) * 0.7);
+    }
+
+    .portfolio-section .section-content .title .second-line {
+        font-size: var(--font-size-exrta-large);
+    }
+
+    /* Story Section */
+    .story-section {
+        padding: 80px 40px;
+    }
+
+    .story-section .section-content {
+        gap: 30px;
+    }
+}
+
+/* Küçük cihazlar (tabletler, 577px–768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+        --font-size-xxxl: 2rem;
+        --font-size-exrta-large: 2.3rem;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    #menu-close-button,
+    #menu-open-button {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--primary-color);
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--primary-color);
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+
+    /* Portfolio Section */
+    .portfolio-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: auto;
+        min-height: 70vh;
+    }
+
+    .portfolio-section .section-content .title .first-line {
+        font-size: calc(var(--font-size-xl) * 0.7);
+    }
+
+    .portfolio-section .section-content .title .second-line {
+        font-size: var(--font-size-exrta-large);
+        margin-top: 10px;
+    }
+
+    /* Story Section */
+    .story-section {
+        padding: 60px 30px;
+    }
+
+    .story-section .section-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .story-section .section-content .story-first-line {
+        margin: 30px 0 20px;
+    }
+}
+
+/* Ekstra küçük cihazlar (telefonlar, 0–576px) */
+@media (max-width: 576px) {
+    :root {
+        --font-size-s: 0.8rem;
+        --font-size-m: 0.95rem;
+        --font-size-l: 1.1rem;
+        --font-size-xl: 1.3rem;
+        --font-size-xxl: 1.5rem;
+        --font-size-xxxl: 1.7rem;
+        --font-size-exrta-large: 2rem;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    #menu-close-button,
+    #menu-open-button {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--primary-color);
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--primary-color);
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+
+    .section-title {
+        font-size: var(--font-size-l);
+        padding: 40px 0 60px;
+    }
+
+    .section-title::after {
+        width: 60px;
+        height: 4px;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section .section-content {
+        height: auto;
+        min-height: 60vh;
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 15px;
+    }
+
+    .portfolio-section .section-content .title-container {
+        width: 100%;
+    }
+
+    .portfolio-section .section-content .title .first-line {
+        font-size: calc(var(--font-size-l) * 1.2);
+    }
+
+    .portfolio-section .section-content .title .second-line {
+        font-size: var(--font-size-exrta-large);
+        margin-top: 5px;
+    }
+
+    /* Story Section */
+    .story-section {
+        padding: 40px 20px;
+    }
+
+    .story-section .section-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .story-section .section-content .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .story-section .section-content .story-first-line {
+        margin: 20px 0 15px;
+        line-height: 24px;
+    }
+
+    .story-section .section-content .description {
+        line-height: 22px;
+    }
+
+    .footer-section .section-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-section .social-link-list {
+        gap: 20px;
+    }
+
+    .footer-section .social-link-list .social-link {
+        font-size: var(--font-size-m);
+    }
+}
