@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pixelify+Sans&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +18,9 @@
     --secondary-color: #383838;
     --light-gray-color: #797979;
     --medium-gray-color: #444544;
+    --game-dark-color: #050709;
+    --game-light-color: #173031;
+    --game-fire-color: #b82d09;
 
     /* Font Sizes */
     --font-size-s: 0.9rem;
@@ -25,6 +29,8 @@
     --font-size-l: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 2.3rem;
+    --font-size-xxxl: 2.5rem;
+    --font-size-exrta-large: 3.5rem;
 
     /* Font Weights */
     --font-weight-normal: 400;
@@ -153,11 +159,17 @@ body {
 
 .container {
     max-width: var(--site-max-width);
-    margin: 0px auto;
+    margin: 40px auto;
     padding: 40px;
     background-color: var(--medium-gray-color);
     border-radius: var(--border-radius-s);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo-text {
+    border-bottom: none;
+    box-shadow: none;
+    margin-bottom: 0;
 }
 
 h1 {
@@ -167,7 +179,7 @@ h1 {
     font-weight: var(--font-weight-bold);
 }
 
-h2 {
+.container .main-title {
     margin-top: 30px;
     font-size: var(--font-size-xl);
     color: var(--dark-color);
@@ -176,7 +188,7 @@ h2 {
     font-weight: var(--font-weight-semibold);
 }
 
-h3 {
+.container .sub-title {
     margin-top: 20px;
     font-size: var(--font-size-m);
     color: var(--dark-color);

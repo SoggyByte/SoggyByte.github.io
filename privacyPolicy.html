@@ -33,16 +33,16 @@
     <!-- Header | Navbar -->
     <header>
         <nav class="navbar section-content">
-            <a href="#home" class="nav-logo">
+            <a href="index.html#home" class="nav-logo">
                 <h2 class="logo-text">SoggyByte</h2>
             </a>
             <ul class="nav-menu">
                 <button id="menu-close-button" class="fas fa-times"></button>
 
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="#games" class="nav-link">Games</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Games</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
             <button id="menu-open-button" class="fas fa-bars"></button>
         </nav>
@@ -58,7 +58,7 @@
             and any other related services that link to this Privacy Policy (collectively, the “Services”).</p>
         <p>If you do not agree with the terms of this Policy, please do not use our Services.</p>
 
-        <h2>1. Information We Collect</h2>
+        <h2 class ="main-title">1. Information We Collect</h2>
         <p class="description">We collect certain information when you visit the Website or choose to interact with us.
             More information
             about the categories and sources of information is provided below. In this Privacy Policy, “personal
@@ -67,7 +67,7 @@
             as your IP address, browser settings and device identifiers, but only when this information can identify you
             as an individual.
 
-        <h3>Information We Collect Automatically</h3>
+        <h3 class="sub-title">Information We Collect Automatically</h3>
 
         Device Information. When you visit the Website, our web servers automatically log information about your
         device such as your Internet Protocol (IP) address, device identifiers, device type, device’s operating
@@ -78,7 +78,7 @@
         the types of cookies we use, please see the Cookies section below.</p>
         </ul>
 
-        <h3>Information You Choose to Provide</h3>
+        <h3 class="sub-title">Information You Choose to Provide</h3>
 
 
         <p class="description">Contact Information. We collect information that you provide to enable us to communicate
@@ -91,7 +91,7 @@
             contact us for support, we may receive the contents of a message that you may send to us, and other
             information you choose to provide.</p>
 
-        <h2>2. How We Use Your Information</h2>
+        <h2 class ="main-title">2. How We Use Your Information</h2>
         <p class="description">We use the categories of information listed above to operate, administer, and improve the
             Services and for
             other legitimate business purposes to the extent permitted under applicable law, including:
@@ -110,12 +110,12 @@
             We may aggregate or de-identify the information we collect in such a way that it cannot be associated with
             an identifiable individual.</p>
 
-        <h2>3. How We Share Your Information</h2>
+        <h2 class ="main-title">3. How We Share Your Information</h2>
         <p class="description">We do <strong>not sell</strong> your personal data. However, we may share it with service
             providers, legal
             authorities, or in the event of a business transfer.</p>
 
-        <h2>4. Your Rights and Choices</h2>
+        <h2 class ="main-title">4. Your Rights and Choices</h2>
         <p class="description">You have several options to manage how your information is collected and used. For
             example, you can adjust
             your device or browser settings to limit automatic data collection or control which data is shared with
@@ -147,20 +147,20 @@
 
         </p>
 
-        <h2>5. International Data Transfers</h2>
+        <h2 class ="main-title">5. International Data Transfers</h2>
         <p class="description">Your data may be processed in countries with different data protection laws. We take
             steps to ensure security
             and compliance.</p>
 
-        <h2>6. Data Security</h2>
+        <h2 class ="main-title">6. Data Security</h2>
         <p class="description">We use reasonable security measures, but no service is 100% secure.</p>
 
-        <h2>7. Data Retention</h2>
+        <h2 class ="main-title">7. Data Retention</h2>
         <p class="description">We retain personal data as long as necessary for business and legal purposes. Anonymized
             data may be kept
             longer.</p>
 
-        <h2>8. Cookies</h2>
+        <h2 class ="main-title">8. Cookies</h2>
         <p class="description">We use cookies, log files, pixel tags, web beacons, scripts, eTags device IDs and similar
             files or
             technologies (“Cookies”) to collect and store information about your device and use of
@@ -174,18 +174,18 @@
             disabled preference being set, however, we will stop using the disabled Cookie to collect any further
             information.</p>
 
-        <h2>9. Children’s Privacy</h2>
+        <h2 class ="main-title">9. Children’s Privacy</h2>
         <p class="description">Our Services are not intended for children under 18. If collected unintentionally, such
             data will be deleted.
         </p>
 
-        <h2>10. Changes to This Policy</h2>
+        <h2 class ="main-title">10. Changes to This Policy</h2>
         <p class="description">When we update the Privacy Policy, we will notify you by updating the “Last Updated” date
             at the top of this
             policy, posting the new Privacy Policy, and providing any other notice required by applicable law. We
             recommend that you regularly review the Privacy Policy to stay informed of our privacy practices.</p>
 
-        <h2>11. Contact</h2>
+        <h2 class ="main-title">11. Contact</h2>
         <p class="description">If you have questions, please contact us at: <strong>soggybytegames@gmail.com</strong>
         </p>
     </div>
@@ -210,9 +210,21 @@
 
         </div>
     </footer>
-    
+
     <!-- Main Script -->
     <script src="script.js"></script>
+
+    <!--Scroll Script -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 
 </html>
