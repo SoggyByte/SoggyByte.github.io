@@ -43,7 +43,6 @@
 
 html {
     scroll-behavior: smooth;
-
 }
 
 /* Styling for whole site */
@@ -193,7 +192,6 @@ header .navbar {
     background: transparent;
 }
 
-
 .hero-section .hero-image-wrapper {
     max-width: 500px;
     margin-right: 30px;
@@ -332,8 +330,6 @@ header .navbar {
     align-items: center;
 }
 
-/* .contact-section .contact-info-list .contact-info i{
-    font-size: var(--font-size-m);
 } */
 
 .contact-section .contact-image-wrapper {
@@ -414,21 +410,46 @@ header .navbar {
     color: var(--dark-color);
 }
 
+/* Büyük cihazlar (dizüstü ve üzeri, 993px ve üzeri) */
+@media (min-width: 993px) {
+    /* Büyük ekranlarda genel stil değişikliği gerekmemektedir, 
+       çünkü ana stil büyük ekranlar için tasarlanmıştır */
+}
 
-/* Responsive media query code for mac width 1024px */
-@media screen and (max-width: 1024px) {}
+/* Orta cihazlar (küçük dizüstüler, 769px–992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    :root {
+        --font-size-xl: 1.8rem;
+        --font-size-xxl: 2rem;
+    }
+    
+    .about-section {
+        padding: 80px 40px;
+    }
+    
+    .about-section .about-image-wrapper .about-image {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .contact-section .section-content {
+        gap: 30px;
+    }
+    
+    .hero-section .hero-image-wrapper {
+        max-width: 400px;
+    }
+}
 
-/* Responsive media query code for mac width 900px */
-
-@media screen and (max-width: 900px) {
-
+/* Küçük cihazlar (tabletler, 577px–768px) */
+@media (min-width: 577px) and (max-width: 768px) {
     :root {
         --font-size-m: 1rem;
         --font-size-l: 1.3rem;
         --font-size-xl: 1.5rem;
         --font-size-xxl: 1.8rem;
     }
-
+    
     body.show-mobile-menu header::before {
         content: "";
         position: fixed;
@@ -439,23 +460,23 @@ header .navbar {
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, 0.2);
     }
-
+    
     #menu-close-button,
     #menu-open-button {
         display: block;
         font-size: var(--font-size-l);
     }
-
+    
     .navbar #menu-close-button {
         position: absolute;
         right: 30px;
         top: 30px;
     }
-
+    
     .navbar #menu-open-button {
         color: var(--primary-color);
     }
-
+    
     .navbar .nav-menu {
         display: block;
         position: fixed;
@@ -471,18 +492,18 @@ header .navbar {
         background: var(--primary-color);
         transition: left 0.2s ease;
     }
-
+    
     body.show-mobile-menu .navbar .nav-menu {
         left: 0;
     }
-
+    
     .navbar .nav-menu .nav-link {
         color: var(--dark-color);
         display: block;
         margin-top: 17px;
         font-size: var(--font-size-l);
     }
-
+    
     .hero-section .section-content {
         gap: 50px;
         text-align: center;
@@ -490,50 +511,65 @@ header .navbar {
         flex-direction: column-reverse;
         justify-content: center;
     }
-
-    .hero-section .hero-details :is(.description),
-    .about-section .about-details,
-    .contact-section .contact-form {
+    
+    .hero-section .hero-details .description {
         max-width: 100%;
     }
-
+    
     .hero-section .hero-details .buttons {
         justify-content: center;
     }
-
+    
     .hero-section .hero-image-wrapper {
-        max-width: 270px;
+        max-width: 300px;
         margin-right: 0;
     }
-
+    
+    .about-section {
+        padding: 60px 30px;
+    }
+    
     .about-section .section-content {
-        gap: 70px;
+        gap: 50px;
         flex-direction: column;
     }
-
+    
     .about-section .about-image-wrapper .about-image {
         width: 100%;
         height: 100%;
-        max-width: 250px;
+        max-width: 280px;
         aspect-ratio: 1;
     }
-
+    
+    .about-section .about-details {
+        max-width: 100%;
+    }
+    
     .contact-section .section-content {
         align-items: center;
         flex-direction: column;
     }
-
+    
+    .contact-section .contact-form {
+        max-width: 100%;
+    }
+    
     .contact-section .contact-image-wrapper {
-        max-width: 270px;
+        max-width: 300px;
         margin-right: 0;
     }
-
+    
+    .who-we-are {
+        padding: 150px 0 80px;
+    }
+    
+    .who-we-are .slider-wrapper {
+        margin: 0 30px 50px;
+    }
 }
 
-
-/* Responsive media query code for mac width 640px */
-@media screen and (max-width: 640px) {
-
+/* Ekstra küçük cihazlar (telefonlar, 0–576px) */
+@media (max-width: 576px) {
     :root {
         --font-size-s: 0.8rem;
         --font-size-m: 0.95rem;
@@ -541,69 +577,200 @@ header .navbar {
         --font-size-xl: 1.3rem;
         --font-size-xxl: 1.5rem;
     }
-
+    
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    #menu-close-button,
+    #menu-open-button {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+    
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    
+    .navbar #menu-open-button {
+        color: var(--primary-color);
+    }
+    
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--primary-color);
+        transition: left 0.2s ease;
+    }
+    
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+    
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+    
     .section-title {
         font-size: var(--font-size-l);
         padding: 40px 0 60px;
     }
-
+    
+    .section-title::after {
+        width: 60px;
+        height: 4px;
+    }
+    
+    .hero-section .section-content {
+        gap: 40px;
+        text-align: center;
+        padding: 20px 15px 15px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    
+    .hero-section .hero-details .title {
+        font-size: var(--font-size-xxl);
+    }
+    
     .hero-section .hero-details .description {
         font-size: var(--font-size-s);
         max-width: 100%;
+        margin: 20px 0 30px;
     }
-
+    
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
     .hero-section .hero-details .button {
         font-size: var(--font-size-s);
         padding: 8px 18px;
     }
-
+    
+    .hero-section .hero-image-wrapper {
+        max-width: 220px;
+        margin-right: 0;
+    }
+    
+    .about-section {
+        padding: 50px 20px;
+    }
+    
+    .about-section .section-content {
+        gap: 40px;
+        flex-direction: column;
+    }
+    
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        aspect-ratio: 1;
+    }
+    
+    .about-section .about-details {
+        max-width: 100%;
+    }
+    
     .about-section .about-details .text {
         font-size: var(--font-size-s);
         margin: 30px 0 20px;
         line-height: 24px;
         text-align: center;
     }
-
-    .about-section .about-image-wrapper .about-image {
-        max-width: 200px;
-        aspect-ratio: 1;
+    
+    .who-we-are {
+        padding: 120px 0 60px;
     }
-
+    
+    .who-we-are .slider-wrapper {
+        margin: 0 0 30px;
+    }
+    
+    .who-we-are .us {
+        padding: 20px;
+    }
+    
+    .who-we-are .us .us-image {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 30px;
+    }
+    
+    .who-we-are .swiper-slide-button {
+        display: none;
+    }
+    
+    .contact-section {
+        padding: 40px 0 70px;
+    }
+    
+    .contact-section .section-content {
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-section .contact-form {
+        max-width: 100%;
+    }
+    
     .contact-section .contact-form .form-input,
     .contact-section .contact-form textarea {
         font-size: var(--font-size-s);
+        height: 45px;
     }
-
+    
+    .contact-section .contact-form textarea {
+        height: 90px;
+    }
+    
     .contact-section .contact-form .submit-button {
         font-size: var(--font-size-s);
         padding: 8px 20px;
     }
-
+    
+    .contact-section .contact-image-wrapper {
+        max-width: 220px;
+        margin-right: 0;
+    }
+    
     .footer-section .section-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 15px;
-    }
-
-    .navbar .nav-menu {
-        width: 100%;
-    }
-
-    .navbar .nav-menu .nav-link {
-        font-size: var(--font-size-l);
-    }
-
-    .who-we-are .swiper-slide-button {
-        display: none;
-    }
-
-    .who-we-are .slider-wrapper {
-        margin: 0 0 30px;
-    }
-
-    .footer-section .section-content {
-        flex-direction: column;
         gap: 20px;
+    }
+    
+    .footer-section .social-link-list {
+        gap: 20px;
+    }
+    
+    .footer-section .social-link-list .social-link {
+        font-size: var(--font-size-m);
     }
 }
