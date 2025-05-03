@@ -483,7 +483,7 @@ header .navbar {
 
 .footer-section .social-link-list .social-link:hover,
 .footer-section .policy-text .policy-link:hover {
-    color: var(--dark-color);
+    color: var(--light-gray-color);
 }
 
 /* Büyük cihazlar (dizüstü ve üzeri, 993px ve üzeri) */
